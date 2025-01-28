@@ -65,7 +65,7 @@ export const getAllProducts = expressAsyncHandler(async (req: Request, res: Resp
     // 5% tax is added to post discount : 
     const gstDiscount = 0.05 * overAllPriceAfterDiscount!;
 
-    const priceAfterGst = overAllPriceAfterDiscount! - gstDiscount;
+    const priceAfterGst = overAllPriceAfterDiscount! + gstDiscount;
 
 
     return res.status(200).json({
